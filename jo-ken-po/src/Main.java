@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-
+    /*
     public static JoKenPo startGame(){
         System.out.println("****** Jo-Ken-Po ******\n");
         Scanner scann = new Scanner(System.in);
@@ -11,8 +11,12 @@ public class Main {
 
         Player player = new Player(playerName);
     }
+    */
 
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your name?");
+        String player = scanner.nextLine();
+        System.out.println("Nice to meet you, " + player + "!");
     }
 }
