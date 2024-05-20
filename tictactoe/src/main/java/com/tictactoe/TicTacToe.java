@@ -72,9 +72,9 @@ public class TicTacToe {
         if (j < 2) {
           s += "|";
         }
-        if (i < 2) {
-          s += "\n-----\n";
-        }
+      }
+      if (i < 2) {
+        s += "\n-----\n";
       }
     }
 
