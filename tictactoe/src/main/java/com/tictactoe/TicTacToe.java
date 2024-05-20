@@ -19,12 +19,12 @@ public class TicTacToe {
     player = X;
   }
 
-  public void putMark(int i, int j) throws IllegalAccessException {
+  public void putMark(int i, int j) {
     if ((i < 0) || (i > 2) || (j < 0) | (j > 2)) {
-      throw new IllegalAccessException("Invalid board position");
+      throw new IllegalArgumentException("Invalid board position");
     }
     if (board[i][j] != EMPTY) {
-      throw new IllegalAccessException("Board position occupied");
+      throw new IllegalArgumentException("Board position occupied");
     }
 
     board[i][j] = player;
@@ -52,4 +52,32 @@ public class TicTacToe {
     }
   }
 
+  public String toString() {
+    String s = "";
+    for (int i = 0; i < 3; i++) {
+      for (int j = 0; j < 3; j++) {
+        switch (board[i][j]) {
+          case X:
+            s += "X";
+            break;
+          case O:
+            s += "O";
+            break;
+          case EMPTY:
+            s += " ";
+            break;
+          default:
+            break;
+        }
+        if (j < 2) {
+          s += "|";
+        }
+        if (i < 2) {
+          s += "\n-----\n";
+        }
+      }
+    }
+
+    return s;
+  }
 }
