@@ -1,4 +1,3 @@
-package com.vetor;
 
 public class Vetor {
   public String[] elementos;
