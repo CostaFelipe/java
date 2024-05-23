@@ -18,6 +18,22 @@ public class Vetor {
     return false;
   }
 
+  public String display() {
+    StringBuilder s = new StringBuilder();
+    s.append("[");
+    for (int i = 0; i < this.tamanho - 1; i++) {
+      s.append(elementos[i]);
+      s.append(", ");
+    }
+
+    if (this.tamanho > 0) {
+      s.append(elementos[this.tamanho - 1]);
+    }
+    s.append("]");
+
+    return s.toString();
+  }
+
   public int tamanho() {
     return this.tamanho;
   }
