@@ -1,3 +1,5 @@
+package armazenaaluno.src;
+
 public class Aluno {
 
   String nome;
