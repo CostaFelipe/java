@@ -1,5 +1,7 @@
 package consultapreco.src;
 
+import java.util.Scanner;
+
 public class ConsultaPrecoApp {
 
   private static Produto[] produtos = {
@@ -10,7 +12,26 @@ public class ConsultaPrecoApp {
   };
 
   public static void main(String[] args) {
+    System.out.print("informe o código de barras:");
+    Scanner scan = new Scanner(System.in);
 
+    String codigoBarrasInformado = scan.nextLine();
+    Produto produtoEncontrado = procurarProduto(codigoBarrasInformado);
 
+    if (produtoEncontrado != null) {
+      System.out.println(produtoEncontrado.getProduto());
+    } else {
+      System.out.println("Produto não encontrado");
+    }
+
+  }
+
+  private static Produto procurarProduto(String codigoBarras) {
+    for (Produto produtoAtual : produtos) {
+      if (produtoAtual.getCodigoBarras().equals(codigoBarras)) {
+        return produtoAtual;
+      }
+    }
+    return null;
   }
 }
