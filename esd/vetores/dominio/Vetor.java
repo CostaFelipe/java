@@ -2,9 +2,11 @@ package esd.vetores.dominio;
 
 public class Vetor {
   private String[] elementos;
+  private int tamanho;
 
   public Vetor(int capacidade) {
     this.elementos = new String[capacidade];
+    this.tamanho = 0;
   }
 
   //primeira versão
@@ -14,6 +16,15 @@ public class Vetor {
         this.elementos[i] = elemento;
         break;
       }
+    }
+  }
+
+  public void segundoAdd(String elemento) throws Exception {
+    if (this.tamanho < this.elementos.length) {
+      this.elementos[this.tamanho] = elemento;
+      this.tamanho++;
+    } else {
+      throw new Exception("Vetor está cheio, não é possível adicionar mais");
     }
   }
 }
