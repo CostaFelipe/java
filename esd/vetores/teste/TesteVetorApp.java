@@ -7,7 +7,7 @@ public class TesteVetorApp {
 
     Vetor vetor = new Vetor(10);
 
-    vetor.adicionar("João");
-    vetor.adicionar("Maria");
+    vetor.add("João");
+    vetor.add("Maria");
   }
 }
