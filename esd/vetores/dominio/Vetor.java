@@ -24,12 +24,13 @@ public class Vetor {
       throw new IllegalArgumentException("Posição Inválida");
     }
 
-    for (int i = posicao - 1; i < tamanho - 1; i++) {
+    for (int i = posicao; i < tamanho - 1; i++) {
       this.elementos[i] = this.elementos[i + 1];
     }
 
     this.tamanho--;
   }
+
 
   public String toString() {
     StringBuilder s = new StringBuilder();
