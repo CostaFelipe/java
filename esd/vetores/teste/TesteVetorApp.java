@@ -7,8 +7,12 @@ public class TesteVetorApp {
 
     Vetor vetor = new Vetor(10);
 
-    vetor.add("João");
-    vetor.add("Maria");
+    vetor.add("elemento 1");
+    vetor.add("elemento 2");
+    vetor.add("elemento 3");
+
+    System.out.println(vetor);
+    vetor.remove(1);
     System.out.println(vetor);
   }
 }

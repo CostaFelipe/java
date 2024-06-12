@@ -10,13 +10,25 @@ public class Vetor {
   }
 
   //versão final
-  public boolean add(String elemento){
+  public boolean add(String elemento) {
     if (this.tamanho < elementos.length) {
       this.elementos[this.tamanho] = elemento;
       this.tamanho++;
       return true;
     }
     return false;
+  }
+
+  public void remove(int posicao) {
+    if (!(posicao >= 0 && posicao < this.tamanho)) {
+      throw new IllegalArgumentException("Posição Inválida");
+    }
+
+    for (int i = posicao - 1; i < tamanho - 1; i++) {
+      this.elementos[i] = this.elementos[i + 1];
+    }
+
+    this.tamanho--;
   }
 
   public String toString() {
