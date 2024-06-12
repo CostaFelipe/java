@@ -9,5 +9,6 @@ public class TesteVetorApp {
 
     vetor.add("João");
     vetor.add("Maria");
+    System.out.println(vetor);
   }
 }
