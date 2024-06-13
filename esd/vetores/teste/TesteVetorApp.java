@@ -12,8 +12,8 @@ public class TesteVetorApp {
     vetor.add("elemento 3");
 
     System.out.println(vetor);
-    vetor.remove(1);
-    System.out.println(vetor);
     System.out.println(vetor.buscar("elemento 3"));
+    vetor.remove("elemento 2");
+    System.out.println(vetor);
   }
 }

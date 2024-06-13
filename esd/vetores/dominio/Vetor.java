@@ -40,6 +40,13 @@ public class Vetor {
     this.tamanho--;
   }
 
+  public void remove(String elemento) {
+    int pos = this.buscar(elemento);
+    if (pos > -1) {
+      this.remove(pos);
+    }
+  }
+
 
   public String toString() {
     StringBuilder s = new StringBuilder();
