@@ -19,6 +19,15 @@ public class Vetor {
     return false;
   }
 
+  public int buscar(String elemento) {
+    for (int i = 0; i < elementos.length; i++) {
+      if (this.elementos[i].equals(elemento)) {
+        return i;
+      }
+    }
+    return -1;
+  }
+
   public void remove(int posicao) {
     if (!(posicao >= 0 && posicao < this.tamanho)) {
       throw new IllegalArgumentException("Posição Inválida");
