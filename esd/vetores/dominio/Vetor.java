@@ -28,6 +28,13 @@ public class Vetor {
     return -1;
   }
 
+  public String buscar(int posicao) {
+    if (!(posicao >= 0 && posicao < this.tamanho)) {
+      throw new IllegalArgumentException("Posição inválida");
+    }
+    return this.elementos[posicao];
+  }
+
   public void remove(int posicao) {
     if (!(posicao >= 0 && posicao < this.tamanho)) {
       throw new IllegalArgumentException("Posição Inválida");
